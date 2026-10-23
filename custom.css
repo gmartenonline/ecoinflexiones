@@ -358,8 +358,10 @@ margin-bottom: 0;
 }
 /* Sidebar video button */
 .video-button {
-display: grid;
-grid-template-columns: 2.75rem 1fr;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+text-align: left;
 align-items: center;
 gap: 0.5rem;
 margin-bottom: 1rem;
@@ -392,8 +394,10 @@ outline-offset: 3px;
 }
 /* Sidebar English-language button */
 .english-button {
-display: grid;
-grid-template-columns: 2.75rem 1fr;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+text-align: left;
 align-items: center;
 gap: 0.5rem;
 margin-bottom: 1rem;
@@ -788,30 +792,41 @@ flex: 0 0 auto;
 margin: 0;
 }
 /* End educational page styles */
-/* Sidebar promo buttons: left-aligned on desktop, stacked below 1200px */
-.sidebar-promos .video-button,
-.sidebar-promos .english-button {
-display: flex;
+/* Sidebar promo icons: fixed width keeps both text labels aligned */
+.site-sidebar .sidebar-promos .video-button-icon,
+.site-sidebar .sidebar-promos .english-button-icon {
+flex: 0 0 2.75rem;
+margin: 0;
+}
+.site-sidebar .sidebar-promos .video-button > span:last-child,
+.site-sidebar .sidebar-promos .english-button > span:last-child {
+min-width: 0;
+max-width: 100%;
+text-align: left;
+}
+/* Sidebar promos: horizontal and left-aligned on wide screens */
+.site-sidebar .sidebar-promos .video-button,
+.site-sidebar .sidebar-promos .english-button {
 flex-direction: row;
 align-items: center;
 justify-content: flex-start;
 text-align: left;
 }
-.sidebar-promos .video-button-icon,
-.sidebar-promos .english-button-icon {
-flex-shrink: 0;
-margin: 0;
-}
-.sidebar-promos .video-button > span:last-child,
-.sidebar-promos .english-button > span:last-child {
-min-width: 0;
-max-width: 100%;
-}
+/* Stack icons above centered text below 1200px */
 @media (max-width: 1199.98px) {
-.sidebar-promos .video-button,
-.sidebar-promos .english-button {
+.site-sidebar .sidebar-promos .video-button,
+.site-sidebar .sidebar-promos .english-button {
 flex-direction: column;
+align-items: center;
 gap: 0.75rem;
+text-align: center;
+}
+.site-sidebar .sidebar-promos .video-button-icon,
+.site-sidebar .sidebar-promos .english-button-icon {
+flex-basis: auto;
+}
+.site-sidebar .sidebar-promos .video-button > span:last-child,
+.site-sidebar .sidebar-promos .english-button > span:last-child {
 text-align: center;
 }
 }
