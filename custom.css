@@ -788,20 +788,14 @@ flex: 0 0 auto;
 margin: 0;
 }
 /* End educational page styles */
-/* Sidebar promo buttons: horizontal on desktop, stacked below 1200px */
+/* Sidebar promo buttons: left-aligned on desktop, stacked below 1200px */
 .sidebar-promos .video-button,
 .sidebar-promos .english-button {
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: center;
-}
-@media (max-width: 1199.98px) {
-.sidebar-promos .video-button,
-.sidebar-promos .english-button {
-flex-direction: column;
-gap: 0.75rem;
-text-align: center;
+justify-content: flex-start;
+text-align: left;
 }
 .sidebar-promos .video-button-icon,
 .sidebar-promos .english-button-icon {
@@ -812,5 +806,12 @@ margin: 0;
 .sidebar-promos .english-button > span:last-child {
 min-width: 0;
 max-width: 100%;
+}
+@media (max-width: 1199.98px) {
+.sidebar-promos .video-button,
+.sidebar-promos .english-button {
+flex-direction: column;
+gap: 0.75rem;
+text-align: center;
 }
 }
