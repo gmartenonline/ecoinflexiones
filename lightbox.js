@@ -34,8 +34,8 @@
 //
 
 // If you would like to use a custom loading image or close button reference them in the next two lines.
-var loadingImage = '../site-media/gallery_loading.gif';		
-var closeButton = '../site-media/gallery_close.gif';		
+var loadingImage = '/site-media/gallery_loading.gif';		
+var closeButton = '/site-media/gallery_close.gif';		
 
 
 
