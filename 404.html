@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0ZLNLWNDDD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-0ZLNLWNDDD');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="La página que busca no está disponible. Visite la página de inicio o explore nuestras historias y recursos.">
+<meta name="author" content="El Proyecto Puntos de Inflexión Ecológica">
+<title>Página no encontrada | El Proyecto Puntos de Inflexión Ecológica</title>
+<link rel="icon" href="/favicon.ico">
+<link href="/bootstrap.min.css" rel="stylesheet">
+<link href="/custom.css" rel="stylesheet">
+<style>
+.error-page {
+min-height: 55vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 4rem 1.5rem;
+}
+.error-page h1 {
+color: #ced4da;
+font-size: clamp(7rem, 20vw, 12rem);
+font-weight: 700;
+line-height: 1;
+margin: 0 0 1.5rem;
+}
+.error-page .error-title {
+font-size: 1.5rem;
+font-weight: 700;
+margin-bottom: 1rem;
+}
+.error-page .error-message {
+max-width: 40rem;
+}
+</style>
+</head>
+<body>
+<div class="site-wrapper">
+{% include "header.njk" %}
+{% include "navigation.njk" %}
+<div class="container p-0">
+<div class="row g-0">
+<main class="col-12 bg-white main-content">
+<div class="error-page">
+<h1>404<span class="visually-hidden">: Página no encontrada</span></h1>
+<p class="error-title">Página no encontrada</p>
+<p class="error-message">Lo sentimos, la página que busca no está disponible. Es posible que se haya movido o que el enlace ya no sea válido.</p>
+<p class="mb-0">Puede <a href="/">volver al inicio</a> o <a href="/historias.html">explorar nuestras historias</a>.</p>
+</div>
+</main>
+</div>
+</div>
+{% include "footer.njk" %}
+</div>
+<script src="/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('nav .active, .navbar .active').forEach(element => element.classList.remove('active'));
+document.querySelectorAll('nav [aria-current], .navbar [aria-current]').forEach(element => element.removeAttribute('aria-current'));
+});
+</script>
+</body>
+</html>
